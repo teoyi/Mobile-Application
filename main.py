@@ -11,8 +11,13 @@ class LoginScreen(Screen):
 class RootWidget(ScreenManager):
     pass
 
+class SignUpScreen(Screen):
+    def add_user(self, uname, pword):
+        print(uname, pword)
+
 class MainApp(App):
-    pass
+    def build(self):
+        return RootWidget()
 
 if __name__ == "__main__":
     MainApp().run()
